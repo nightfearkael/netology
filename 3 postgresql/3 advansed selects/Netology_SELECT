@@ -1,0 +1,72 @@
+# Название и продолжительность самого длительного трека.
+SELECT name, duration 
+FROM track 
+ORDER BY duration 
+DESC LIMIT 1;
+
+SELECT name, duration 
+FROM track 
+WHERE duration=(
+	SELECT MAX(duration) FROM track
+);
+
+
+# Название треков, продолжительность которых не менее 3,5 минут.
+SELECT name FROM track WHERE duration>209;
+
+
+# Названия сборников, вышедших в период с 2018 по 2020 год включительно.
+SELECT name FROM collection WHERE year BETWEEN '2018-01-01' and '2021-01-01';
+
+
+# Исполнители, чьё имя состоит из одного слова.
+SELECT name FROM artist WHERE name NOT LIKE '% %';
+
+
+# Название треков, которые содержат слово «мой» или «my».
+SELECT name FROM track WHERE LOWER(name) LIKE '%my %';
+
+
+# Количество исполнителей в каждом жанре.
+SELECT COUNT(artist_id), name 
+FROM artist_genres a 
+JOIN music_genre m ON a.genre_id=m.id 
+GROUP BY name;
+
+
+# Количество треков, вошедших в альбомы 2019–2020 годов.
+SELECT COUNT(t.id), a.name 
+FROM track t 
+LEFT JOIN album a ON t.album_id = a.id 
+WHERE a.year BETWEEN '2019-01-01' AND '2020-12-31' 
+GROUP BY a.name;
+
+
+# Средняя продолжительность треков по каждому альбому.
+SELECT AVG(t.duration), a.name 
+FROM track t 
+LEFT JOIN album a ON t.album_id = a.id 
+GROUP BY a.name;
+
+
+# Все исполнители, которые не выпустили альбомы в 2021 году.
+SELECT a.id, a.name
+FROM artist a
+WHERE a.id NOT IN (
+    SELECT aa.artist_id
+    FROM artist_albums aa
+    JOIN album al ON aa.album_id = al.id
+    WHERE al.year = '2021-01-01'
+);
+
+
+# Названия сборников, в которых присутствует конкретный исполнитель (выберите его сами).
+SELECT DISTINCT c.name
+FROM collection c
+JOIN collection_tracks ct ON c.id = ct.collection_id
+JOIN track t ON ct.track_id = t.id
+JOIN album a ON t.album_id = a.id
+JOIN artist_albums aa ON a.id = aa.album_id
+JOIN artist ar ON aa.artist_id = ar.id
+WHERE ar.name = 'NF';
+

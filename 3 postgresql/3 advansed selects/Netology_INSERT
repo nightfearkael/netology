@@ -1,0 +1,310 @@
+# Музыкальные жанры
+INSERT INTO music_genre (name) VALUES ('rock');
+INSERT INTO music_genre (name) VALUES ('pop');
+INSERT INTO music_genre (name) VALUES ('rap');
+
+# Исполнители
+INSERT INTO artist (name) VALUES ('From Ashes to New');
+INSERT INTO artist (name) VALUES ('NEFFEX');
+INSERT INTO artist (name) VALUES ('NF');
+INSERT INTO artist (name) VALUES ('Neoni');
+INSERT INTO artist (name) VALUES ('Thousand Foot Krutch');
+INSERT INTO artist (name) VALUES ('Trevor McNevan');
+
+# Связь исполнителей и жанров
+INSERT INTO artist_genres (artist_id, genre_id) VALUES (1, 1);
+INSERT INTO artist_genres (artist_id, genre_id) VALUES (2, 1);
+INSERT INTO artist_genres (artist_id, genre_id) VALUES (2, 3);
+INSERT INTO artist_genres (artist_id, genre_id) VALUES (3, 3);
+INSERT INTO artist_genres (artist_id, genre_id) VALUES (4, 2);
+INSERT INTO artist_genres (artist_id, genre_id) VALUES (5, 1);
+INSERT INTO artist_genres (artist_id, genre_id) VALUES (5, 3);
+INSERT INTO artist_genres (artist_id, genre_id) VALUES (6, 1);
+
+# Альбомы
+
+#Thousand Foot Krutch, Trevor McNevan
+INSERT INTO album (name, year) VALUES ('The End Is Where We Begin', '2012-01-01');
+INSERT INTO album (name, year) VALUES ('Untraveled Roads', '2017-01-01');
+# NF
+INSERT INTO album (name, year) VALUES ('The Search', '2019-01-01');
+INSERT INTO album (name, year) VALUES ('CLOUDS', '2021-01-01');
+# From Ashes to New
+INSERT INTO album (name, year) VALUES ('Blackout', '2024-01-01');
+# NEFFEX
+INSERT INTO album (name, year) VALUES ('Fight Back: The Collection', '2018-01-01');
+# Neoni
+INSERT INTO album (name, year) VALUES ('Wars In A Wonderland', '2021-01-01');
+
+
+# Связь исполнителей и альбомов
+INSERT INTO artist_albums (artist_id, album_id) VALUES (5, 1);
+INSERT INTO artist_albums (artist_id, album_id) VALUES (6, 1);
+INSERT INTO artist_albums (artist_id, album_id) VALUES (5, 2);
+INSERT INTO artist_albums (artist_id, album_id) VALUES (6, 2);
+INSERT INTO artist_albums (artist_id, album_id) VALUES (3, 3);
+INSERT INTO artist_albums (artist_id, album_id) VALUES (3, 4);
+INSERT INTO artist_albums (artist_id, album_id) VALUES (1, 5);
+INSERT INTO artist_albums (artist_id, album_id) VALUES (2, 6);
+INSERT INTO artist_albums (artist_id, album_id) VALUES (4, 7);
+
+# Сборники
+INSERT INTO collection (name, year) VALUES ('My Vibe', '2023-01-01');
+INSERT INTO collection (name, year) VALUES ('Best Rock Tracks', '2018-01-01');
+INSERT INTO collection (name, year) VALUES ('Most listened', '2020-01-01');
+INSERT INTO collection (name, year) VALUES ('For training', '2018-01-01');
+
+
+# Треки
+INSERT INTO track (name, duration, album_id) VALUES ('The Introduction', 60, 1);
+INSERT INTO track (name, duration, album_id) VALUES ('We Are', 198, 1);
+INSERT INTO track (name, duration, album_id) VALUES ('Light up the Sky', 238, 1);
+INSERT INTO track (name, duration, album_id) VALUES ('The End Is Where We Begin', 224, 1);
+INSERT INTO track (name, duration, album_id) VALUES ('Let the Sparks Fly', 246, 1);
+INSERT INTO track (name, duration, album_id) VALUES ('I Get Wicked', 212, 1);
+INSERT INTO track (name, duration, album_id) VALUES ('Be Somebody', 222, 1);
+INSERT INTO track (name, duration, album_id) VALUES ('Courtesy Call', 236, 1);
+INSERT INTO track (name, duration, album_id) VALUES ('War of Change', 231, 1);
+INSERT INTO track (name, duration, album_id) VALUES ('Down', 207, 1);
+
+INSERT INTO track (name, duration, album_id) VALUES ('Running With Giants (Live)', 282, 2);
+INSERT INTO track (name, duration, album_id) VALUES ('Light up the Sky (Live)', 261, 2);
+INSERT INTO track (name, duration, album_id) VALUES ('The River (Live)', 202, 2);
+INSERT INTO track (name, duration, album_id) VALUES ('Push (Live)', 251, 2);
+INSERT INTO track (name, duration, album_id) VALUES ('Untraveled Road (Live)', 235, 2);
+INSERT INTO track (name, duration, album_id) VALUES ('Let the Sparks Fly (Live)', 284, 2);
+INSERT INTO track (name, duration, album_id) VALUES ('Born This Way (Live)', 194, 2);
+INSERT INTO track (name, duration, album_id) VALUES ('Courtesy Call (Live)', 299, 2);
+INSERT INTO track (name, duration, album_id) VALUES ('Be Somebody (Live)', 217, 2);
+INSERT INTO track (name, duration, album_id) VALUES ('War of Change (Live)', 226, 2);
+INSERT INTO track (name, duration, album_id) VALUES ('The End Is Where We Begin (Live)', 222, 2);
+INSERT INTO track (name, duration, album_id) VALUES ('A Different Kind of Dynamite (Live)', 203, 2);
+
+INSERT INTO track (name, duration, album_id) VALUES ('The Search', 248, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('Leave Me Alone', 308, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('Change', 236, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('My Stress', 252, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('Nate', 302, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('Time', 240, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('Returns', 232, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('When I Grow Up', 196, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('Only', 225, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('Let Me Go', 277, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('Interlude', 49, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('Hate Myself', 250, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('I Miss The Days', 269, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('No Excuses', 201, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('Like This', 207, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('Options', 206, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('WHY', 287, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('Thinking', 192, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('Trauma', 247, 3);
+INSERT INTO track (name, duration, album_id) VALUES ('Time Edit', 230, 3);
+
+INSERT INTO track (name, duration, album_id) VALUES ('CLOUDS', 243, 4);
+INSERT INTO track (name, duration, album_id) VALUES ('THATS A JOKE', 229, 4);
+INSERT INTO track (name, duration, album_id) VALUES ('JUST LIKE YOU', 251, 4);
+INSERT INTO track (name, duration, album_id) VALUES ('STORY', 279, 4);
+INSERT INTO track (name, duration, album_id) VALUES ('PRIDEFUL', 205, 4);
+INSERT INTO track (name, duration, album_id) VALUES ('LOST', 234, 4);
+INSERT INTO track (name, duration, album_id) VALUES ('LAYERS', 195, 4);
+INSERT INTO track (name, duration, album_id) VALUES ('DRIFTING', 200, 4);
+INSERT INTO track (name, duration, album_id) VALUES ('TRUST', 264, 4);
+INSERT INTO track (name, duration, album_id) VALUES ('PAID MY DUES', 211, 4);
+INSERT INTO track (name, duration, album_id) VALUES ('CLOUDS', 229, 4);
+
+INSERT INTO track (name, duration, album_id) VALUES ('Heartache', 205, 5);
+INSERT INTO track (name, duration, album_id) VALUES ('Nightmare', 187, 5);
+INSERT INTO track (name, duration, album_id) VALUES ('Hate Me Too', 201, 5);
+INSERT INTO track (name, duration, album_id) VALUES ('Hope You are Happy', 216, 5);
+INSERT INTO track (name, duration, album_id) VALUES ('Barely Breathing', 188, 5);
+INSERT INTO track (name, duration, album_id) VALUES ('Dead To Me', 198, 5);
+INSERT INTO track (name, duration, album_id) VALUES ('Monster In Me', 214, 5);
+INSERT INTO track (name, duration, album_id) VALUES ('Echoes', 207, 5);
+INSERT INTO track (name, duration, album_id) VALUES ('Armageddon', 213, 5);
+INSERT INTO track (name, duration, album_id) VALUES ('Legacy', 219, 5);
+INSERT INTO track (name, duration, album_id) VALUES ('Until We Break', 214, 5);
+INSERT INTO track (name, duration, album_id) VALUES ('Broken By Design', 185, 5);
+
+INSERT INTO track (name, duration, album_id) VALUES ('Fight Back', 200, 6);
+INSERT INTO track (name, duration, album_id) VALUES ('Soldier', 215, 6);
+INSERT INTO track (name, duration, album_id) VALUES ('Make It', 253, 6);
+INSERT INTO track (name, duration, album_id) VALUES ('Never Give Up', 251, 6);
+INSERT INTO track (name, duration, album_id) VALUES ('Failure', 317, 6);
+INSERT INTO track (name, duration, album_id) VALUES ('Spartan', 213, 6);
+INSERT INTO track (name, duration, album_id) VALUES ('Unstoppable', 203, 6);
+INSERT INTO track (name, duration, album_id) VALUES ('Greatest', 196, 6);
+INSERT INTO track (name, duration, album_id) VALUES ('Crown', 235, 6);
+INSERT INTO track (name, duration, album_id) VALUES ('Graveyard', 173, 6);
+INSERT INTO track (name, duration, album_id) VALUES ('Whats Up', 133, 6);
+INSERT INTO track (name, duration, album_id) VALUES ('Watch Me', 245, 6);
+
+INSERT INTO track (name, duration, album_id) VALUES ('WONDERLAND', 197, 7);
+INSERT INTO track (name, duration, album_id) VALUES ('MACHINE', 189, 7);
+INSERT INTO track (name, duration, album_id) VALUES ('UH OH', 195, 7);
+INSERT INTO track (name, duration, album_id) VALUES ('LOSER', 202, 7);
+INSERT INTO track (name, duration, album_id) VALUES ('RIP', 183, 7);
+INSERT INTO track (name, duration, album_id) VALUES ('DARKSIDE', 168, 7);
+INSERT INTO track (name, duration, album_id) VALUES ('OUTLAW', 198, 7);
+INSERT INTO track (name, duration, album_id) VALUES ('MUTINY', 211, 7);
+
+
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 1)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 2)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 3)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 4)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 5)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 6)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 7)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 8)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 9)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 10)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 11)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 12)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 13)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 14)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 15)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 16)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 17)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 18)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 19)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 20)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 21)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 22)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 23)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 24)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 25)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 26)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 27)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 28)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 29)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 30)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 31)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 32)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 33)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 34)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 35)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 36)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 37)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 38)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 39)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 40)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 41)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 42)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 43)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 44)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 45)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 46)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 47)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 48)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 49)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 50)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 51)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 52)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 53)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 54)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 55)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 56)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 57)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 58)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 59)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 60)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 61)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 62)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 63)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 64)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 65)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 66)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 67)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 68)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 69)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 70)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 71)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 72)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 73)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 74)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 75)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 76)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 77)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 78)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 79)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 80)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 81)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 82)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 83)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 84)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (1, 85)
+
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 1)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 2)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 3)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 4)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 5)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 6)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 7)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 8)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 9)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 10)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 11)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 12)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 13)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 14)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 15)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 16)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 17)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 18)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 19)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 20)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 21)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 22)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 66)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 67)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 68)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 69)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 70)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 71)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 72)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 73)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 74)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 75)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (2, 76)
+
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (3, 2)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (3, 8)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (3, 9)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (3, 23)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (3, 24)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (3, 30)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (3, 32)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (3, 43)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (3, 52)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (3, 54)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (3, 60)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (3, 66)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (3, 79)
+
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 2)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 3)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 6)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 8)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 10)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 14)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 22)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 25)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 26)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 27)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 44)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 47)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 51)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 78)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 80)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 81)
+INSERT INTO collection_tracks (collection_id, track_id) VALUES (4, 83)
+
+
+
+
+
+
+
+
