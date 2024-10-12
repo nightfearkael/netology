@@ -20,6 +20,7 @@ def solution(a, b, c):
         x_2 = (-b - discriminant(a, b, c) ** 0.5) / 2 * a
         print(x_1, x_2)
 
+
 if __name__ == '__main__':
     solution(1, 8, 15)
     solution(1, -13, 12)
